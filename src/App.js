@@ -1,11 +1,19 @@
+import React, {useState} from 'react';
 import './App.css';
 import Square from './Square';
 
 function App() {
-  const propsTest = "testing 1 2 3"
+  const [squares, setSquares] = useState(["", "", "", "", "", "", "", "", ""])
+  const [player, setPlayer] = useState(true)
+
   return (
     <div className="App">
-      <Square propVar={propsTest}></Square>
+      <Square 
+        squares={squares}
+        setSquares={setSquares}
+        player={player}
+        setPlayer={setPlayer}
+      />
     </div>
   );
 }
