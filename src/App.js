@@ -8,12 +8,18 @@ function App() {
 
   return (
     <div className="App">
-      <Square 
-        squares={squares}
-        setSquares={setSquares}
-        player={player}
-        setPlayer={setPlayer}
-      />
+      <div className='container'>
+        {squares.map((val, index)=>{
+          return <Square
+          squareValue={val}
+          index={index} 
+          squares={squares}
+          setSquares={setSquares}
+          player={player}
+          setPlayer={setPlayer}
+        />
+        })}
+      </div>
     </div>
   );
 }
